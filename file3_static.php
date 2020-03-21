@@ -2,24 +2,15 @@
 /**
  *
  */
-abstract class Player {
-	public $nama, $goals;
-	public function __construct($nama) {
-		$this->nama = $nama;
+class Lyric {
+	public static function act1() {
+		echo "Ketika hati yang mudah rapuh ini diuji oleh duniawi, diuji oleh materi, lagi, lagi, dan lagi... UwU";
 	}
-	abstract public function goal_msg();
-}
-
-class Goal extends Player {
-	public function set_score($score) {
-		$this->goals = $score;
-	}
-	public function goal_msg() {
-		echo "$this->nama made $this->goals goals!";
+	public static function act2() {
+		echo "Bila habis sudah waktu ini, tak lagi berpijak pada dunia";
 	}
 }
-
-$Ronaldinho = new Goal('Ronaldinho');
-$Ronaldinho->set_score(100);
-$Ronaldinho->goal_msg();
+Lyric::act1();
+echo "<br>";
+Lyric::act2();
 ?>
